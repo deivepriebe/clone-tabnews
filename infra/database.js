@@ -31,12 +31,14 @@ async function getNewClient() {
   return client;
 }
 
-export default {
+const database = {
   query: query,
   getNewClient,
   // acima eu posso repetir o valor ou se quiser posso só deixar um pois
   // dá no mesmo já que é o mesmo nome
 };
+
+export default database;
 
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
